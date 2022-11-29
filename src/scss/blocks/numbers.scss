@@ -1,0 +1,33 @@
+@use '../mixins/responsive.scss' as *;
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 120px;
+    @include responsive (desktop){
+        flex-direction: row;
+        gap: 250px;
+    }
+}
+
+.number{
+    &__icon{
+        width: 40px;
+    }
+    &__title{
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    &__m{
+        font-size: 4.2rem;
+    }
+    &__text{
+        color: var(--grayish-blue);
+    }
+}

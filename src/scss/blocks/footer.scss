@@ -1,0 +1,118 @@
+/* ESTILOS DEL FOOTER */
+@use '../mixins/responsive.scss' as *;
+.footer{
+    background-color: var(--very-dark-cyan);
+    color: white;
+    position: relative;
+    padding-top: 100px;
+   
+    &__bg{
+        width: 100%;
+        position: absolute;
+        top: -70px;
+       @include responsive (desktop) {
+            top: -155px;
+       }
+       
+    }
+    &__newsletter{
+        padding: 30px;
+        @include responsive (desktop){
+            width: 40%;
+        }
+    }
+    &__title{
+        font-size: 1.3rem;
+        font-weight:700;
+
+    }
+    &__text{
+        font-family: 'Open Sans', sans-serif;
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 1.2rem;
+        width: 95%;
+        margin-bottom: 40px;
+        @include responsive (desktop){
+            width: 80%;
+        }
+    }
+    &__subscription{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-end;
+        @include responsive (desktop){
+            flex-direction: row;
+        }
+    }
+    &__email{
+        width: 100%;
+        height: 50px;
+        border-radius: 0.6rem;
+        background-color: white;
+    }
+    &__buttom{
+        width: 40%;
+        height: 50px;
+        border-radius: 0.6rem;
+        background-color: var(--pink);
+        text-align: center;
+        padding-top: 16px;
+    }
+
+
+    &__section{
+        padding: 30px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include responsive (desktop){
+            width: 40%;
+        }
+
+    }
+    &__information{
+        display: flex;
+        gap: 20px;
+        align-items: baseline;
+        margin-bottom: -30px;
+    }
+    &__icon{
+        object-fit: contain;
+        height: 20px;
+    }
+
+    &__rrss{
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        margin-top: 70px;
+        margin-bottom: 50px;
+
+        &--circle{
+            width: 40px;
+            height: 40px;
+            border-radius: 0.7rem;
+            background-color: white;
+            text-align: center;
+        }
+        &--icon{
+            font-size: 1.7rem;
+            padding-top: 6px;
+            color: var(--very-dark-cyan);
+        }
+        &--circle:hover{
+            background-color: rgb(75, 219, 229);
+        }
+    }
+    &__container{
+        @include responsive (desktop){
+           display: flex;
+           flex-direction: row-reverse;
+           justify-content: space-evenly
+        }
+
+    }
+}

@@ -1,0 +1,74 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.header{
+    text-align: center;
+    margin-bottom: 70px;
+    width: 95%;
+    
+    @include responsive (desktop){
+       width: 95%;
+       margin-right: auto;margin-left: auto;
+    }
+    &__button--try{
+        padding-top: 13px;
+        font-size: 0.8rem;
+        background-color: white;
+        color: var(--pink);
+        border: 1px solid var(--pink);
+        width: 130px;
+        height: 40px;
+        margin-right: 0;
+    }
+    &__button--try:hover{
+        color: var(--grayish-blue);
+        background-color: white;
+    }
+    &__top{
+        padding: 30px;
+        display: flex;
+        text-align:center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    &__logo{
+        object-fit: contain;
+        width: 140px
+    }
+    &__description{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 100px;
+        @include responsive (desktop){
+            width: 100%;
+        }
+    }
+
+    &__title{
+        line-height: 45px;
+        @include responsive (desktop){
+            font-size: 2.8rem;
+        }
+    }
+    &__text{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 50px;
+        @include responsive (desktop){
+            width: 50%;
+            margin-right: auto;margin-left: auto;
+
+        }
+    }
+    &__image{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        @include responsive (desktop){
+            width: 60%;
+        }
+    }
+}

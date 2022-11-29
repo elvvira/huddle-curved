@@ -1,0 +1,98 @@
+/* ESTILOS DEL MAIN */
+@use '../mixins/responsive.scss' as *;
+
+.article{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 240px;
+    @include responsive (desktop){
+        margin-bottom: 200px;
+        grid-template-columns: 60% 50%;
+        grid-template-rows: 350px;
+        justify-content: space-between;
+    }
+
+    &__image{
+        padding: 60px;
+        grid-row: 1/2;
+        @include responsive (desktop){
+            height: 350px;
+            grid-column: 2/3;
+            grid-row: 1/2;  
+        }
+        &--reverse{
+            grid-column: 1/2;
+        }
+    }
+    &__description{
+        padding-right: 30px;
+        padding-left: 30px;
+        grid-row: 2/3;
+        @include responsive (desktop){
+            grid-column: 1/2;
+            grid-row-start: 1;
+            margin-top: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        &--reverse{
+            @include responsive (desktop){
+                grid-column: 2/3;
+                margin-left: -70px;
+                padding-right: 200px;
+            }
+        }
+    }
+    &__text{
+        padding-bottom: 30px;
+        line-height: 25px;
+        color: var(--grayish-blue);
+    }
+}
+.article--bg{
+    position: relative;
+    background-color: var(--very-pale-cyan);
+    height: 590px;
+    @include responsive (desktop){
+        margin-right: auto;margin-left: auto;
+        height: 400px;
+    }
+}
+.image__size{
+    width: 100%;
+}
+.image--bg{
+    position: absolute;
+    top: -140px;
+    width: 100%;
+
+}
+.image__bg-bottom{
+    position: absolute;
+    top: 580px;
+    width: 100%;
+    @include responsive (desktop){
+        top: 380px;
+    }
+}
+
+
+.article__description{
+    width: 80%;
+    margin-right: auto;margin-left: auto;
+    text-align: center;
+    margin-bottom: 200px;
+    @include responsive (desktop){
+        margin-bottom: 300px;
+    }
+    &--title{
+        line-height: 50px;
+        margin-bottom: 30px;
+    }
+}
